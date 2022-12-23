@@ -3,58 +3,64 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro num,somaPar=0,somaImpar=0,x
+	// Exercício 01
+	     inteiro tabuada,x=1,resultado
+		escreva("\nDigite um número (1 – 10): ")
+		leia(tabuada)
+		limpa()
+		enquanto(tabuada<1 ou tabuada>10)
+		{
 
-		para(x=1;x<=10;x++){
-			
-			escreva("\nEntre com um número: ")
+			escreva("\nDigite um número inteiro entre 1 e 10: ")
+			leia(tabuada)
+		}
+		
+		faca
+		{
+			resultado = tabuada * x
+			escreva("\n",tabuada," X ",x," = ",resultado)
+			x++
+		}
+		enquanto(x<=10)
+		
+	//Exercício 03
+          inteiro somaPar=0, somaImpar=0
+		inteiro x1, num
+
+		para(x1=1; x1<=10; x1++){
+			escreva("\nDigite o " ,x1, "ºnúmero: ")
 			leia(num)
-		se(num % 2 == 0)
-			{somaPar++
-			
+
+			se(num % 2 == 0)
+				somaPar++
+			senao
+				somaImpar++	
 		}
-		senao
-			{somaImpar++
+		escreva("\nTotal de números pares: ", somaPar)
+		escreva("\nTotal de números pares: ", somaImpar)
 
-			
-		}
-		escreva("\nTemos um total de ", somaPar , " números Pares")
-		escreva("\nTemos um total de ", somaImpar , " números Impares")
 		
-	}
-}
-}
+		// Exeercício	04
+           inteiro continua1 = 1
+   		 inteiro idade1
+   		 inteiro somaTotalMenor21 = 0
+  	 	 inteiro somaTotalMaior50 = 0
 
-programa
-{
-	
-	funcao inicio()
-	{
-		inteiro tabuada = 5
-		inteiro n = 1
-		inteiro res
+    enquanto(continua1 == 1){
+      escreva("Digite uma idade: ")
+      leia(idade1)
 
-	
-		
-			escreva("\nDigite um número para multiplicar por 5: ")
-			leia(n)
-			
-			
-			
-		faca{
-			se (n>=11) escreva ("\nDigite um número de 1 à 10! ")
-			res=tabuada*n 
-			se (n<=10) escreva("\n", tabuada, " X " , n , " = " , res) n++
-	
-			
-		}enquanto (n<=10)
-		
-			
-		
-		
-	
-	}
-}
+      se(idade1 < 21 e idade1 > 0)
+        somaTotalMenor21++
+      senao se(idade1 > 50)
+        somaTotalMaior50++
+      
+      se(idade1 < 0)
+        continua1 = 0
+    }
+
+    escreva("\nTotal de pessoas menores de 21 anos: ", somaTotalMenor21)
+    escreva("\nTotal de pessoas maiores de 50 anos: ", somaTotalMaior50)
 
 /* $$$ Portugol Studio $$$ 
  * 
